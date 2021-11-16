@@ -1,0 +1,6 @@
+framework module Pods_SimplePencilKitTest_SimplePencilKitTestUITests {
+  umbrella header "Pods-SimplePencilKitTest-SimplePencilKitTestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
