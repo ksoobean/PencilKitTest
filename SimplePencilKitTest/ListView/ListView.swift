@@ -48,6 +48,7 @@ protocol ListViewProtocol {
             
             listCollectionView?.register(ListCell.self, forCellWithReuseIdentifier: cellId)
             
+            listCollectionView?.backgroundColor = .white
             
             self.addSubview(listCollectionView!)
         }
@@ -107,16 +108,21 @@ extension ListView {
     // 문서 리스트 가져오기
     private func getDocumentList() {
         let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
             // process files
+            
+            
             
             print(fileURLs)
             
         } catch {
             print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
         }
+        
+        self.listCollectionView?.reloadData()
+        
     }
     
 //    /// 폴더 이름으로 경로 만들어주기

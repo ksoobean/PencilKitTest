@@ -12,6 +12,7 @@ import PencilKit
 
 class DetailViewController: UIViewController {
     
+    
     private var listView: UIView?
 
     
@@ -29,6 +30,8 @@ class DetailViewController: UIViewController {
         self.setNavigation()
         
         // 리스트 영역 셋팅
+        
+        
     }
 
 

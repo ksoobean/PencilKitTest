@@ -18,6 +18,9 @@ import SnapKit
         // Do any additional setup after loading the view.
         
         self.initView()
+        
+        
+        
     }
 
 
@@ -26,6 +29,19 @@ import SnapKit
         
         // 네비게이션 셋팅
         self.setNavigation()
+        
+//        let button = UIButton()
+//        button.backgroundColor = .blue
+//        button.setTitle("test button", for: .normal)
+//
+//        self.view.addSubview(button)
+//
+//        button.snp.remakeConstraints { make in
+//            make.center.equalToSuperview()
+//            make.width.equalToSuperview()
+//            make.height.equalTo(100)
+//        }
+        
         
         // 리스트 영역 셋팅
         self.setListView()
@@ -44,6 +60,9 @@ import SnapKit
         listView?.snp.remakeConstraints({ make in
             make.leading.trailing.top.bottom.equalToSuperview()
         })
+        
+        
+        
     }
     
 }
